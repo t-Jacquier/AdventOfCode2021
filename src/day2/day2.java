@@ -9,6 +9,7 @@ public class day2 {
         Scanner scanner;
         int horizontal_position= 0;
         int depth = 0;
+        int aim = 0;
         String direction;
         int intensity;
         File file = new File("src/day2/input");
@@ -20,12 +21,13 @@ public class day2 {
                 switch (direction) {
                     case "forward":
                         horizontal_position += intensity;
+                        depth += aim*intensity;
                         break;
                     case "up":
-                        depth -= intensity;
+                        aim -= intensity;
                         break;
                     case "down":
-                        depth += intensity;
+                        aim += intensity;
                         break;
                 }
             }
